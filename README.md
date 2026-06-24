@@ -12,8 +12,6 @@ Most of my projects live in that gap — RAG pipelines, agentic workflows, full-
 | Project | What it is | Stack |
 |---|---|---|
 | [**CognitiveSB**](https://github.com/Sudhanshukumar0007/CognitiveSB) | AI study companion — PDFs/YT → Socratic tutor, flashcards, knowledge graph | LangGraph · FAISS · Flask · React |
-| **AIRA** | Modular AI OS with Brain layer, Nervous System middleware, multi-modal subsystems | FastAPI · Python · Agents |
-| **Supreme Hardware Store** | Full-stack e-commerce platform for a real hardware shop | Next.js 14 · FastAPI · PostgreSQL · Razorpay |
 | **Ternary XNOR+Popcount kernel** | Research: solving the "Unpacking Tax" of ternary weights on INT8 edge hardware | C++ · SIMD |
 
 ---
