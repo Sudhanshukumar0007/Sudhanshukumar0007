@@ -1,38 +1,85 @@
-# Hi there, I'm Sudhanshu Kumar 👋[cite: 1]
-### A.k.a. Shadow Byte | AI Developer & B.Tech CSE (AI) Student[cite: 1]
+# hey, I'm Sudhanshu 👋
 
-I am a B.Tech in Computer Science and Engineering (Artificial Intelligence) student at KIET Group of Institutions (2024-2028).[cite: 1] I specialize in architecting intelligent, agentic systems, full-stack applications, and solving complex algorithmic challenges.[cite: 1]
+> *Second-year CSE (AI) @ KIET | Building things that think.*
 
-## 🚀 About Me
-* 🎓 **Education:** Pursuing my B.Tech in CSE (AI) at KIET Group of Institutions, following my Matriculation and Intermediate Education.[cite: 1]
-* 💻 **Problem Solving:** Actively solving 150+ DSA problems in C++.[cite: 1]
-* 🧠 **Core CS Focus:** Strong foundation in Data Structures & Algorithms (C++), OOP (Java), DBMS, OS, and System Design.[cite: 1]
-* 🏆 **Certifications:** AWS Certified Cloud Practitioner, AI Primer Infosys, and Machine Learning Specialization (Coursera).[cite: 1]
+I'm obsessed with the gap between "model that works in a notebook" and "system that actually ships."  
+Most of my projects live in that gap — RAG pipelines, agentic workflows, full-stack apps with real AI baked in.
 
-## 🛠️ Tech Stack & Skills
-* **Languages:** Python, C++, C, SQL, JavaScript, TypeScript[cite: 1]
-* **AI/ML:** LLMs, RAG, LangChain, LangGraph, NLP, Computer Vision, FAISS, ChromaDB, Agentic AI[cite: 1]
-* **Web & Frameworks:** Flask, FastAPI, React, Node.js, Express.js[cite: 1]
-* **Databases & Architecture:** SQLite, MongoDB Atlas, Git, WebSockets, REST APIs[cite: 1]
+---
 
-## 💻 Featured Projects
+## 🧠 What I'm building right now
 
-### 📚 CognitiveSB
-An AI study companion built on LangGraph RAG with SQLite persistence and SM-2 spaced repetition.[cite: 1] It turns PDFs and YouTube videos into a Socratic tutor, auto-generating structured notes, flashcards, quizzes, and an interactive knowledge graph.[cite: 1]
+| Project | What it is | Stack |
+|---|---|---|
+| [**CognitiveSB**](https://github.com/Sudhanshukumar0007/CognitiveSB) | AI study companion — PDFs/YT → Socratic tutor, flashcards, knowledge graph | LangGraph · FAISS · Flask · React |
+| **AIRA** | Modular AI OS with Brain layer, Nervous System middleware, multi-modal subsystems | FastAPI · Python · Agents |
+| **Supreme Hardware Store** | Full-stack e-commerce platform for a real hardware shop | Next.js 14 · FastAPI · PostgreSQL · Razorpay |
+| **Ternary XNOR+Popcount kernel** | Research: solving the "Unpacking Tax" of ternary weights on INT8 edge hardware | C++ · SIMD |
 
-### 🤖 Project Aira
-A Flask-based intelligent chatbot utilizing RapidFuzz for similarity-based query matching.[cite: 1] It features dual-layer memory for session persistence and a dynamic learning engine that extracts user patterns from a manual knowledge base.[cite: 1]
+---
 
-### 📈 PerfAi
-A comprehensive, full-stack AI-powered HR application designed to manage personnel directories, track employee performance, and generate actionable AI performance reviews.[cite: 1]
+## 🛠️ Stack
 
-### 🔄 HabitFlow
-A full-stack production-ready MERN habit tracker featuring streaks, gamification, and analytics.[cite: 1]
+```
+AI/ML      →  LangChain · LangGraph · RAG · FAISS · ChromaDB · NLP · Computer Vision
+Backend    →  FastAPI · Flask · Node.js · REST · WebSockets · Celery · Redis
+Frontend   →  React · TypeScript · Next.js 14
+DB         →  PostgreSQL · SQLite · MongoDB
+Cloud      →  AWS (Certified Cloud Practitioner)
+Languages  →  Python · C++ · TypeScript · SQL
+```
+
+---
+
+## 📌 Featured Projects
+
+### [ShadowByte / CognitiveSB](https://github.com/Sudhanshukumar0007/CognitiveSB)
+RAG-based study companion with four pedagogical modes — Socratic tutor, quiz generator, flashcard engine, and interactive knowledge graph. Built on LangGraph with SM-2 spaced repetition and SSE streaming.  
+`⭐ 3 forks · 7 stars · GSSoC 2026 Project`
+
+### [NervSys](https://github.com/Sudhanshukumar0007/Project_Aira)
+Multimodal agentic AI with triple-LLM orchestration, face recognition, and 16 desktop automation tools. MongoDB + ChromaDB for long-term memory.
+
+### [KashmirVista](https://github.com/Sudhanshukumar0007/KashmirVista)
+Luxury travel booking platform — MERN stack, JWT auth, Razorpay/Stripe payments, admin dashboard.
+
+### [HabitFlow](https://github.com/Sudhanshukumar0007/HabitFlow)
+Production-ready MERN habit tracker with streaks, gamification, and analytics.
+
+---
+
+## 🏆 Certifications
+
+- **AWS Certified Cloud Practitioner**
+- **Machine Learning Specialization** — Coursera (Andrew Ng)
+- **AI Primer** — Infosys
+
+---
 
 ## 📊 GitHub Stats
-![Sudhanshu's GitHub stats](https://github-readme-stats.vercel.app/api?username=Sudhanshukumar0007&show_icons=true&theme=radium)[cite: 1]
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sudhanshukumar0007&layout=compact&theme=radium)[cite: 1]
 
-## 📫 Let's Connect!
-* [LinkedIn](YOUR_LINKEDIN_URL)[cite: 1]
-* [GitHub](https://github.com/Sudhanshukumar0007)[cite: 1]
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Sudhanshukumar0007&show_icons=true&theme=tokyonight&hide_border=true" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sudhanshukumar0007&layout=compact&theme=tokyonight&hide_border=true" width="48%" />
+</p>
+
+---
+
+## 🤝 Open Source
+
+**GSSoC 2026** — Project Admin for CognitiveSB & active contributor across other projects.  
+PRs welcome on CognitiveSB — check the [issues](https://github.com/Sudhanshukumar0007/CognitiveSB/issues) tagged `help wanted`.
+
+---
+
+## 📫 Reach me
+
+[![Gmail](https://img.shields.io/badge/-sudhanshu.kumar.aidev007@gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sudhanshu.kumar.aidev007@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/Sudhanshukumar0007)
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Sudhanshukumar0007)
+
+---
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=Sudhanshukumar0007&color=blueviolet&style=flat" alt="profile views" />
+</p>
