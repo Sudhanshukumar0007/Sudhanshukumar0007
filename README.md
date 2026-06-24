@@ -104,7 +104,7 @@ PRs welcome on CognitiveSB — check the [issues](https://github.com/Sudhanshuku
 ## 📫 Reach me
 [![Portfolio](https://img.shields.io/badge/-Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://portfolio-nine-ecru-35.vercel.app/)
 [![Gmail](https://img.shields.io/badge/-sudhanshu.kumar.aidev007@gmail.com-D14836?style=flat&logo=gmail&logoColor=white)](mailto:sudhanshu.kumar.aidev007@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)]([https://linkedin.com/in/Sudhanshukumar0007](https://linkedin.com/in/sudhanshu-kumar-ai007/))
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/sudhanshu-kumar-ai007/)
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Sudhanshukumar0007)
 
 ---
