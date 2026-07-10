@@ -3,7 +3,7 @@
 > *Second-year CSE (AI) @ KIET | Building things that think.*
 
 I'm obsessed with the gap between "model that works in a notebook" and "system that actually ships."  
-Most of my projects live in that gap — RAG pipelines, agentic workflows, full-stack apps with real AI baked in.
+Most of my projects live in that gap — RAG pipelines, real-time systems, full-stack apps with real AI baked in.
 
 ---
 
@@ -11,10 +11,10 @@ Most of my projects live in that gap — RAG pipelines, agentic workflows, full-
 
 | Project | What it is | Stack |
 |---|---|---|
+| [**PulseRoom**](https://github.com/Sudhanshukumar0007/PulseRoom) | Real-time collaborative chat backend — WebSockets, JWT auth, horizontal scaling | FastAPI · WebSockets · Redis Pub/Sub |
+| [**LinkVault**](https://github.com/Sudhanshukumar0007/LinkVault) | Production-grade URL shortener — refresh token rotation, monitoring, CI/CD | FastAPI · Celery · PostgreSQL · Docker |
 | [**Aaira**](https://github.com/Sudhanshukumar0007/Aaira) | Agentic AI desktop assistant — face recognition, voice, 16 automation tools | FastAPI · LangChain · ChromaDB · MongoDB |
 | [**CognitiveSB**](https://github.com/Sudhanshukumar0007/CognitiveSB) | AI study companion — PDFs/YT → Socratic tutor, flashcards, knowledge graph | LangGraph · FAISS · Flask · React |
-| **Supreme Hardware Store** | Full-stack e-commerce for a real hardware shop | Next.js 14 · FastAPI · PostgreSQL · Razorpay |
-| **Ternary XNOR+Popcount kernel** | Research: solving the "Unpacking Tax" of ternary weights on INT8 edge hardware | C++ · SIMD |
 
 ---
 
@@ -53,23 +53,28 @@ Most of my projects live in that gap — RAG pipelines, agentic workflows, full-
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
 
-**Cloud**
+**Cloud & DevOps**
 
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonwebservices&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
 
 ---
 
 ## 📌 Featured Projects
+
+### [PulseRoom](https://github.com/Sudhanshukumar0007/PulseRoom)
+Real-time collaborative chat backend built from the ground up — WebSocket connections with JWT-based auth, Redis Pub/Sub for cross-instance message broadcasting, and horizontal scaling for multi-node deployments.
+
+### [LinkVault](https://github.com/Sudhanshukumar0007/LinkVault)
+Production-grade URL shortener with JWT auth + refresh token rotation, Celery background workers, Prometheus/Grafana monitoring, full GitHub Actions CI/CD, and a comprehensive test suite. Dockerized end to end.  
+`🔗 Live: link-vault-zbon.onrender.com`
 
 ### [Aaira](https://github.com/Sudhanshukumar0007/Aaira)
 Modular agentic AI desktop assistant with triple-LLM orchestration, face recognition identity system, and 16 desktop automation tools. Voice I/O via Groq Whisper + edge-tts. 3-tier memory with MongoDB + ChromaDB + semantic RAG.
 
 ### [ShadowByte / CognitiveSB](https://github.com/Sudhanshukumar0007/CognitiveSB)
 RAG-based study companion with four pedagogical modes — Socratic tutor, quiz generator, flashcard engine, and interactive knowledge graph. Built on LangGraph with SM-2 spaced repetition and SSE streaming.  
-`⭐ 3 forks · 7 stars · GSSoC 2026 Project`
-
-### [Supreme Hardware Store](https://github.com/Sudhanshukumar0007/Supreme-Hardware-Store)
-Full-stack e-commerce platform for a real hardware shop — Next.js 14, FastAPI, PostgreSQL, Razorpay payments, RapidFuzz search.
+`⭐ 3 forks · 7 stars · GSSoC 2026 Project (archived)`
 
 ### [Chat with YouTube](https://github.com/Sudhanshukumar0007/Chat_with_video)
 RAG app that lets you chat with any YouTube video — transcript extraction, FAISS vector search, Llama 3.1 strictly grounded to the video content. Deployed on Streamlit Cloud.  
@@ -96,8 +101,7 @@ RAG app that lets you chat with any YouTube video — transcript extraction, FAI
 
 ## 🤝 Open Source
 
-**GSSoC 2026** — Project Admin for CognitiveSB & active contributor across other projects.  
-PRs welcome on CognitiveSB — check the [issues](https://github.com/Sudhanshukumar0007/CognitiveSB/issues) tagged `help wanted`.
+**GSSoC 2026** — Project Admin for CognitiveSB, managing external contributors through a full cycle of issues and PRs (security fixes, validation hardening, feature additions). Repo is now archived — code and history are public and browsable.
 
 ---
 
