@@ -17,25 +17,27 @@
 
 </div>
 
----
+👋 About Me
 
-## 👋 About Me
-
-I'm interested in the engineering side of AI — **how models become reliable systems rather than just notebook experiments.**
+I'm interested in the engineering side of AI — how models become reliable systems rather than just notebook experiments.
 
 I work across backend engineering, distributed systems, and applied AI, with a particular interest in:
 
-* 🤖 RAG systems and LLM applications
-* 🧠 AI agents and tool-using systems
-* ⚡ Async and real-time backends
-* 🗄️ Databases, caching and distributed architectures
-* ☁️ Cloud infrastructure and deployment
-* 🧩 System design and scalable APIs
+🤖 RAG systems and LLM applications
 
-```python
+🧠 AI agents and tool-using systems
+
+⚡ Async and real-time backends
+
+🗄️ Databases, caching and distributed architectures
+
+☁️ Cloud infrastructure and deployment
+
+🧩 System design and scalable APIs
+
 class Sudhanshu:
     role = "B.Tech CSE (AI) @ KIET"
-    
+
     focus = [
         "Backend Engineering",
         "Distributed Systems",
@@ -49,36 +51,55 @@ class Sudhanshu:
     ]
 
     motto = "Make it work. Make it measurable. Make it ship."
-```
 
----
+🚀 What I'm Building
 
-## 🚀 What I'm Building
+Project
 
-| Project         | Description                                                        | Stack                                       |
-| --------------- | ------------------------------------------------------------------ | ------------------------------------------- |
-| **PulseRoom**   | Real-time chat backend designed for multi-instance deployments     | `FastAPI` `WebSockets` `Redis` `PostgreSQL` |
-| **LinkVault**   | URL shortener with analytics, rate limiting and background workers | `FastAPI` `PostgreSQL` `Redis` `Celery`     |
-| **Aaira**       | Modular AI desktop assistant with tools and persistent memory      | `FastAPI` `LangChain` `MongoDB` `ChromaDB`  |
-| **CognitiveSB** | Open-source RAG study engine with multiple tutoring modes          | `LangGraph` `FAISS` `Flask` `Celery`        |
+Description
 
----
+Stack
 
-## 📌 Featured Projects
+LinkVault
 
-### ⚡ PulseRoom
+Distributed URL shortener with analytics, rate limiting and background workers
 
-**Distributed real-time chat backend**
+FastAPI PostgreSQL Redis Celery
 
-A backend designed to explore the problems that appear when a real-time application moves beyond a single server.
+PulseRoom
 
-* WebSocket-based real-time communication
-* Redis Pub/Sub for cross-instance event propagation
-* PostgreSQL for durable message history
-* Reconnection flow using the client's last-seen message ID
-* Redis TTL keys for ephemeral presence and typing state
+Distributed real-time chat backend with multi-instance WebSocket communication
 
-```mermaid
+FastAPI WebSockets Redis PostgreSQL
+
+Aaira
+
+Modular AI desktop assistant with tools and persistent memory
+
+FastAPI LangChain MongoDB ChromaDB
+
+CognitiveSB
+
+Open-source RAG study engine with multiple tutoring modes
+
+LangGraph FAISS Flask Celery
+
+📌 Featured Projects
+
+⚡ PulseRoom
+
+Distributed Real-Time Chat Backend
+
+A backend project exploring the challenges of scaling real-time communication beyond a single application instance.
+
+Designed distributed messaging using Redis Pub/Sub to fan out WebSocket events across application instances.
+
+Implemented last_seen_message_id-based reconnect handling backed by durable PostgreSQL chat history.
+
+Built ephemeral presence and typing indicators using Redis TTL keys.
+
+Designed the system around horizontal scale-out of the application layer.
+
 flowchart LR
     A[Client A] -->|WebSocket| I1[App Instance 1]
     B[Client B] -->|WebSocket| I2[App Instance 2]
@@ -88,29 +109,27 @@ flowchart LR
 
     I1 --> P[(PostgreSQL)]
     I2 --> P
-```
 
-**Stack:** FastAPI · AsyncIO · PostgreSQL · Redis · WebSockets · Docker
+Stack: FastAPI · AsyncIO · PostgreSQL · Redis · WebSockets · Docker Compose
 
-[📂 Source](https://github.com/Sudhanshukumar0007)
+🚀 Live Demo
 
----
+🔗 LinkVault
 
-### 🔗 LinkVault
+Distributed URL Shortener & Analytics System
 
-**URL shortener & analytics backend**
+A backend project focused on API design, caching, asynchronous processing, authentication and abuse protection.
 
-A backend project focused on API design, caching, asynchronous processing and abuse protection.
+Designed and implemented 27+ automated integration tests using pytest, gated behind GitHub Actions CI.
 
-* Redis cache-aside strategy for frequently accessed data
-* Celery workers for asynchronous analytics processing
-* Sliding-window rate limiting using Redis sorted sets
-* Token revocation
-* PostgreSQL persistence
-* SQLAlchemy 2.0 + Alembic migrations
-* Automated testing with pytest and GitHub Actions
+Offloaded click analytics to Celery background workers behind a Redis cache-aside layer to keep the redirect path non-blocking.
 
-```mermaid
+Implemented atomic token revocation and sliding-window rate limiting using Redis sorted sets.
+
+Added a fail-open fallback for Redis outages.
+
+Structured the data layer using SQLAlchemy 2.0 async sessions and Alembic migrations.
+
 flowchart LR
     U[User] --> API[FastAPI]
 
@@ -120,61 +139,62 @@ flowchart LR
     API -.->|Analytics Event| Q[[Celery Queue]]
     Q --> W[Celery Worker]
     W --> DB
-```
 
-**Stack:** FastAPI · PostgreSQL · Redis · Celery · SQLAlchemy · Alembic · Docker
+Stack: FastAPI · PostgreSQL · Redis · Celery · SQLAlchemy · Alembic · Docker
 
-[📂 Source](https://github.com/Sudhanshukumar0007)
+🚀 Live API · 📂 Source
 
----
+🤖 Aaira
 
-### 🤖 Aaira
+Modular Agentic Desktop Assistant
 
-**Modular agentic desktop assistant**
+An experimental AI assistant focused on tool use, memory and personalized interaction.
 
-An experimental AI assistant exploring tool use, memory and multimodal interaction.
+Built a multi-model pipeline using Llama 3.3, GPT-4o and Qwen3.
 
-* Multi-model LLM pipeline
-* Tool-based command execution
-* Web browsing and file interaction
-* Persistent conversation memory
-* Face-recognition-based personalization
-* ChromaDB + MongoDB for memory storage
+Integrated headless web browsing, shell execution, file I/O and UI control.
 
-**Stack:** FastAPI · LangChain · ChromaDB · MongoDB · WebSockets
+Added a confirmation gate before executing potentially sensitive actions.
 
-[📂 Source](https://github.com/Sudhanshukumar0007)
+Integrated InsightFace embeddings with ChromaDB and MongoDB for persistent personalized sessions.
 
----
+Used WebSockets for real-time communication between the assistant and client.
 
-### 🧠 CognitiveSB
+Stack: FastAPI · LangChain · ChromaDB · MongoDB · WebSockets
 
-**Open-source RAG study engine · GSSoC 2026**
+📂 Source
+
+🧠 CognitiveSB
+
+Open-Source RAG Study Engine · GSSoC 2026
 
 An AI-powered study platform built around retrieval-augmented generation and structured learning workflows.
 
-* LangGraph-based asynchronous RAG pipeline
-* Four tutoring modes:
+Led development as GSSoC 2026 Project Admin, coordinating 10+ external contributors.
 
-  * Socratic
-  * Feynman
-  * Simple Explanation
-  * Exam Preparation
-* PDF and YouTube transcript processing
-* Structured notes and mind maps
-* SM-2 spaced-repetition flashcards
-* Celery + Redis for asynchronous workloads
-* Open-source project administration and PR reviews
+Reviewed and merged pull requests covering security fixes, asynchronous processing, FAISS session isolation and centralized validation.
 
-**Stack:** LangChain · LangGraph · FAISS · Flask · Celery · Redis
+Built an asynchronous LangGraph RAG pipeline supporting:
 
-[📂 Source](https://github.com/Sudhanshukumar0007)
+Socratic
 
----
+Feynman
 
-## 🛠️ Tech Stack
+Simple Explanation
 
-### Languages
+Exam Preparation
+
+Processes PDFs and YouTube transcripts into structured notes and learning material.
+
+Generates mind maps and SM-2 spaced-repetition flashcards.
+
+Stack: LangChain · LangGraph · FAISS · Flask · Celery · Redis
+
+📂 Source
+
+🛠️ Tech Stack
+
+Languages
 
 <div align="center">
 
@@ -182,7 +202,7 @@ An AI-powered study platform built around retrieval-augmented generation and str
 
 </div>
 
-### Backend & Databases
+Backend & Databases
 
 <div align="center">
 
@@ -190,7 +210,7 @@ An AI-powered study platform built around retrieval-augmented generation and str
 
 </div>
 
-### Cloud, DevOps & Infrastructure
+Cloud, DevOps & Infrastructure
 
 <div align="center">
 
@@ -198,114 +218,88 @@ An AI-powered study platform built around retrieval-augmented generation and str
 
 </div>
 
-### AI / ML
+AI / ML
 
 <div align="center">
 
-`LangChain` · `LangGraph` · `FAISS` · `ChromaDB` · `RAG` · `LLMs` · `Agents`
+LangChain · LangGraph · FAISS · ChromaDB · RAG · LLMs · Agents
 
 </div>
 
----
-
-## 🧠 What I'm Learning
-
-```text
-Backend Engineering
-├── API design
-├── Async systems
-├── Caching
-├── Message queues
-└── Distributed systems
-
-Applied AI
-├── RAG
-├── Agent architectures
-├── LLM evaluation
-├── Embeddings
-└── Model serving
-
-System Design
-├── Scalability
-├── Reliability
-├── Data consistency
-├── Observability
-└── Fault tolerance
-```
-
----
-
-## 📊 GitHub Activity
+🧠 Currently Exploring
 
 <div align="center">
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=Sudhanshukumar0007&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" alt="GitHub stats"/>
+Distributed Systems · System Design · RAG Evaluation
+AI Agents · LLM Serving · Backend Scalability
 
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sudhanshukumar0007&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages"/>
+</div>
 
-<br/>
+📊 GitHub Activity
+
+<div align="center">
 
 <img src="https://streak-stats.demolab.com?user=Sudhanshukumar0007&theme=tokyonight&hide_border=true" alt="GitHub streak"/>
 
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Sudhanshukumar0007&theme=tokyo-night&hide_border=true&area=true" alt="GitHub activity graph" width="95%"/>
-
 </div>
 
----
+🏆 Achievements & Certifications
 
-## 🏆 Achievements
+☁️ AWS Certified Cloud Practitioner
 
-* ☁️ **AWS Certified Cloud Practitioner**
-* 🎓 **Machine Learning Specialization** — Coursera
-* 🧩 **330+ LeetCode problems**
-* 🔥 **57-day maximum LeetCode streak**
-* 🏅 **1,627 LeetCode contest rating**
-* 🌍 **GSSoC 2026 Project Admin**
-* 👨‍💻 Open-source contributor and project maintainer
+🎓 Machine Learning Specialization — Coursera
 
----
+🧩 330+ LeetCode problems solved in C++
 
-## ✍️ Writing
+🔥 57-day maximum LeetCode streak
 
-I document my AI/ML learning journey through **Backprop Diaries** — experiments, concepts, failures and things I learn while building.
+🏅 1,627 LeetCode contest rating
 
-**[Read Backprop Diaries →](https://backpropdiaries.hashnode.dev)**
+🌍 GSSoC 2026 Project Admin
 
----
+👨‍💻 Open-source contributor and project maintainer
 
-## 📫 Connect
+Certificates
+
+🎓 Machine Learning Specialization — Coursera
+
+☁️ AWS Certified Cloud Practitioner
+
+✍️ Writing
+
+I write Backprop Diaries, documenting my AI/ML learning journey through experiments, concepts, failures and things I learn while building.
+
+Read Backprop Diaries →
+
+📫 Let's Connect
 
 <div align="center">
 
 <a href="https://github.com/Sudhanshukumar0007">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
 </a>
 
-<a href="https://www.linkedin.com/in/YOUR-LINKEDIN">
-<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+<a href="https://www.linkedin.com/in/sudhanshu-kumar-ai007/">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 
 <a href="mailto:sudhanshu.kumar.aidev007@gmail.com">
-<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+<img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
 </a>
 
-<a href="https://YOUR-PORTFOLIO-URL">
-<img src="https://img.shields.io/badge/Portfolio-6C63FF?style=for-the-badge&logo=vercel&logoColor=white"/>
+<a href="https://portfolio-nine-ecru-35.vercel.app/">
+<img src="https://img.shields.io/badge/Portfolio-6C63FF?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/>
+</a>
+
+<a href="https://leetcode.com/u/Sudhanshu_kumar_/">
+<img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode"/>
 </a>
 
 <a href="https://backpropdiaries.hashnode.dev">
-<img src="https://img.shields.io/badge/Blog-2962FF?style=for-the-badge&logo=hashnode&logoColor=white"/>
+<img src="https://img.shields.io/badge/Blog-2962FF?style=for-the-badge&logo=hashnode&logoColor=white" alt="Blog"/>
 </a>
 
-</div>
-
----
-
-<div align="center">
-
-### *Build → Measure → Learn → Ship*
+<br/><br/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=110&section=footer" width="100%" alt="footer"/>
 
