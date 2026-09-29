@@ -1,5 +1,4 @@
 <!-- Header -->
-
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=Sudhanshu%20Kumar&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Backend%20%C2%B7%20Distributed%20Systems%20%C2%B7%20Applied%20AI&descAlignY=60&descSize=18" width="100%" alt="Sudhanshu Kumar"/>
@@ -17,24 +16,22 @@
 
 </div>
 
-👋 About Me
+---
 
-I'm interested in the engineering side of AI — how models become reliable systems rather than just notebook experiments.
+## 👋 About Me
+
+I'm interested in the engineering side of AI — **how models become reliable systems rather than just notebook experiments.**
 
 I work across backend engineering, distributed systems, and applied AI, with a particular interest in:
 
-🤖 RAG systems and LLM applications
+- 🤖 RAG systems and LLM applications
+- 🧠 AI agents and tool-using systems
+- ⚡ Async and real-time backends
+- 🗄️ Databases, caching and distributed architectures
+- ☁️ Cloud infrastructure and deployment
+- 🧩 System design and scalable APIs
 
-🧠 AI agents and tool-using systems
-
-⚡ Async and real-time backends
-
-🗄️ Databases, caching and distributed architectures
-
-☁️ Cloud infrastructure and deployment
-
-🧩 System design and scalable APIs
-
+```python
 class Sudhanshu:
     role = "B.Tech CSE (AI) @ KIET"
 
@@ -51,55 +48,34 @@ class Sudhanshu:
     ]
 
     motto = "Make it work. Make it measurable. Make it ship."
+```
 
-🚀 What I'm Building
+---
 
-Project
+## 🚀 What I'm Building
 
-Description
+| Project | Description | Stack |
+|---|---|---|
+| **[LinkVault](https://github.com/Sudhanshukumar0007/Link_vault)** | Distributed URL shortener with analytics, rate limiting and background workers | `FastAPI` `PostgreSQL` `Redis` `Celery` |
+| **PulseRoom** | Distributed real-time chat backend with multi-instance WebSocket communication | `FastAPI` `WebSockets` `Redis` `PostgreSQL` |
+| **[Aaira](https://github.com/Sudhanshukumar0007/Aaira)** | Modular AI desktop assistant with tools and persistent memory | `FastAPI` `LangChain` `MongoDB` `ChromaDB` |
+| **[CognitiveSB](https://github.com/Sudhanshukumar0007/CognitiveSB)** | Open-source RAG study engine with multiple tutoring modes | `LangGraph` `FAISS` `Flask` `Celery` |
 
-Stack
+---
 
-LinkVault
+## 📌 Featured Projects
 
-Distributed URL shortener with analytics, rate limiting and background workers
-
-FastAPI PostgreSQL Redis Celery
-
-PulseRoom
-
-Distributed real-time chat backend with multi-instance WebSocket communication
-
-FastAPI WebSockets Redis PostgreSQL
-
-Aaira
-
-Modular AI desktop assistant with tools and persistent memory
-
-FastAPI LangChain MongoDB ChromaDB
-
-CognitiveSB
-
-Open-source RAG study engine with multiple tutoring modes
-
-LangGraph FAISS Flask Celery
-
-📌 Featured Projects
-
-⚡ PulseRoom
-
-Distributed Real-Time Chat Backend
+### ⚡ PulseRoom
+**Distributed Real-Time Chat Backend**
 
 A backend project exploring the challenges of scaling real-time communication beyond a single application instance.
 
-Designed distributed messaging using Redis Pub/Sub to fan out WebSocket events across application instances.
+- Designed distributed messaging using **Redis Pub/Sub** to fan out WebSocket events across application instances.
+- Implemented `last_seen_message_id`-based reconnect handling backed by durable PostgreSQL chat history.
+- Built ephemeral presence and typing indicators using Redis TTL keys.
+- Designed the system around horizontal scale-out of the application layer.
 
-Implemented last_seen_message_id-based reconnect handling backed by durable PostgreSQL chat history.
-
-Built ephemeral presence and typing indicators using Redis TTL keys.
-
-Designed the system around horizontal scale-out of the application layer.
-
+```mermaid
 flowchart LR
     A[Client A] -->|WebSocket| I1[App Instance 1]
     B[Client B] -->|WebSocket| I2[App Instance 2]
@@ -109,27 +85,26 @@ flowchart LR
 
     I1 --> P[(PostgreSQL)]
     I2 --> P
+```
 
-Stack: FastAPI · AsyncIO · PostgreSQL · Redis · WebSockets · Docker Compose
+**Stack:** FastAPI · AsyncIO · PostgreSQL · Redis · WebSockets · Docker Compose
 
-🚀 Live Demo
+[🚀 Live Demo](https://pulseroom-6r1l.onrender.com)
 
-🔗 LinkVault
+---
 
-Distributed URL Shortener & Analytics System
+### 🔗 LinkVault
+**Distributed URL Shortener & Analytics System**
 
 A backend project focused on API design, caching, asynchronous processing, authentication and abuse protection.
 
-Designed and implemented 27+ automated integration tests using pytest, gated behind GitHub Actions CI.
+- Designed and implemented **27+ automated integration tests** using pytest, gated behind GitHub Actions CI.
+- Offloaded click analytics to **Celery background workers** behind a Redis cache-aside layer to keep the redirect path non-blocking.
+- Implemented atomic token revocation and **sliding-window rate limiting** using Redis sorted sets.
+- Added a fail-open fallback for Redis outages.
+- Structured the data layer using **SQLAlchemy 2.0 async sessions** and Alembic migrations.
 
-Offloaded click analytics to Celery background workers behind a Redis cache-aside layer to keep the redirect path non-blocking.
-
-Implemented atomic token revocation and sliding-window rate limiting using Redis sorted sets.
-
-Added a fail-open fallback for Redis outages.
-
-Structured the data layer using SQLAlchemy 2.0 async sessions and Alembic migrations.
-
+```mermaid
 flowchart LR
     U[User] --> API[FastAPI]
 
@@ -139,62 +114,55 @@ flowchart LR
     API -.->|Analytics Event| Q[[Celery Queue]]
     Q --> W[Celery Worker]
     W --> DB
+```
 
-Stack: FastAPI · PostgreSQL · Redis · Celery · SQLAlchemy · Alembic · Docker
+**Stack:** FastAPI · PostgreSQL · Redis · Celery · SQLAlchemy · Alembic · Docker
 
-🚀 Live API · 📂 Source
+[🚀 Live API](https://link-vault-zbon.onrender.com/docs) · [📂 Source](https://github.com/Sudhanshukumar0007/Link_vault)
 
-🤖 Aaira
+---
 
-Modular Agentic Desktop Assistant
+### 🤖 Aaira
+**Modular Agentic Desktop Assistant**
 
 An experimental AI assistant focused on tool use, memory and personalized interaction.
 
-Built a multi-model pipeline using Llama 3.3, GPT-4o and Qwen3.
+- Built a multi-model pipeline using **Llama 3.3, GPT-4o and Qwen3**.
+- Integrated headless web browsing, shell execution, file I/O and UI control.
+- Added a confirmation gate before executing potentially sensitive actions.
+- Integrated **InsightFace embeddings** with ChromaDB and MongoDB for persistent personalized sessions.
+- Used WebSockets for real-time communication between the assistant and client.
 
-Integrated headless web browsing, shell execution, file I/O and UI control.
+**Stack:** FastAPI · LangChain · ChromaDB · MongoDB · WebSockets
 
-Added a confirmation gate before executing potentially sensitive actions.
+[📂 Source](https://github.com/Sudhanshukumar0007/Aaira)
 
-Integrated InsightFace embeddings with ChromaDB and MongoDB for persistent personalized sessions.
+---
 
-Used WebSockets for real-time communication between the assistant and client.
-
-Stack: FastAPI · LangChain · ChromaDB · MongoDB · WebSockets
-
-📂 Source
-
-🧠 CognitiveSB
-
-Open-Source RAG Study Engine · GSSoC 2026
+### 🧠 CognitiveSB
+**Open-Source RAG Study Engine · GSSoC 2026**
 
 An AI-powered study platform built around retrieval-augmented generation and structured learning workflows.
 
-Led development as GSSoC 2026 Project Admin, coordinating 10+ external contributors.
+- Led development as **GSSoC 2026 Project Admin**, coordinating **10+ external contributors**.
+- Reviewed and merged pull requests covering security fixes, asynchronous processing, FAISS session isolation and centralized validation.
+- Built an asynchronous **LangGraph RAG pipeline** supporting:
+  - Socratic
+  - Feynman
+  - Simple Explanation
+  - Exam Preparation
+- Processes PDFs and YouTube transcripts into structured notes and learning material.
+- Generates mind maps and **SM-2 spaced-repetition flashcards**.
 
-Reviewed and merged pull requests covering security fixes, asynchronous processing, FAISS session isolation and centralized validation.
+**Stack:** LangChain · LangGraph · FAISS · Flask · Celery · Redis
 
-Built an asynchronous LangGraph RAG pipeline supporting:
+[📂 Source](https://github.com/Sudhanshukumar0007/CognitiveSB)
 
-Socratic
+---
 
-Feynman
+## 🛠️ Tech Stack
 
-Simple Explanation
-
-Exam Preparation
-
-Processes PDFs and YouTube transcripts into structured notes and learning material.
-
-Generates mind maps and SM-2 spaced-repetition flashcards.
-
-Stack: LangChain · LangGraph · FAISS · Flask · Celery · Redis
-
-📂 Source
-
-🛠️ Tech Stack
-
-Languages
+### Languages
 
 <div align="center">
 
@@ -202,7 +170,7 @@ Languages
 
 </div>
 
-Backend & Databases
+### Backend & Databases
 
 <div align="center">
 
@@ -210,7 +178,7 @@ Backend & Databases
 
 </div>
 
-Cloud, DevOps & Infrastructure
+### Cloud, DevOps & Infrastructure
 
 <div align="center">
 
@@ -218,24 +186,28 @@ Cloud, DevOps & Infrastructure
 
 </div>
 
-AI / ML
+### AI / ML
 
 <div align="center">
 
-LangChain · LangGraph · FAISS · ChromaDB · RAG · LLMs · Agents
+`LangChain` · `LangGraph` · `FAISS` · `ChromaDB` · `RAG` · `LLMs` · `Agents`
 
 </div>
 
-🧠 Currently Exploring
+---
+
+## 🧠 Currently Exploring
 
 <div align="center">
 
-Distributed Systems · System Design · RAG Evaluation
-AI Agents · LLM Serving · Backend Scalability
+`Distributed Systems` · `System Design` · `RAG Evaluation`  
+`AI Agents` · `LLM Serving` · `Backend Scalability`
 
 </div>
 
-📊 GitHub Activity
+---
+
+## 📊 GitHub Activity
 
 <div align="center">
 
@@ -243,35 +215,34 @@ AI Agents · LLM Serving · Backend Scalability
 
 </div>
 
-🏆 Achievements & Certifications
+---
 
-☁️ AWS Certified Cloud Practitioner
+## 🏆 Achievements & Certifications
 
-🎓 Machine Learning Specialization — Coursera
+- ☁️ **AWS Certified Cloud Practitioner**
+- 🎓 **Machine Learning Specialization** — Coursera
+- 🧩 **330+ LeetCode problems** solved in C++
+- 🔥 **57-day maximum LeetCode streak**
+- 🏅 **1,627 LeetCode contest rating**
+- 🌍 **GSSoC 2026 Project Admin**
+- 👨‍💻 Open-source contributor and project maintainer
 
-🧩 330+ LeetCode problems solved in C++
+### Certificates
 
-🔥 57-day maximum LeetCode streak
+- [🎓 Machine Learning Specialization — Coursera](https://drive.google.com/file/d/1fRgY55AcfNC7C9xExjkXJHZglUVA_0OI/view)
+- [☁️ AWS Certified Cloud Practitioner](https://www.credly.com/badges/490e978f-e6ac-434b-813a-dc58d83effb7/public_url)
 
-🏅 1,627 LeetCode contest rating
+---
 
-🌍 GSSoC 2026 Project Admin
+## ✍️ Writing
 
-👨‍💻 Open-source contributor and project maintainer
+I write **[Backprop Diaries](https://backpropdiaries.hashnode.dev)**, documenting my AI/ML learning journey through experiments, concepts, failures and things I learn while building.
 
-Certificates
+**[Read Backprop Diaries →](https://backpropdiaries.hashnode.dev)**
 
-🎓 Machine Learning Specialization — Coursera
+---
 
-☁️ AWS Certified Cloud Practitioner
-
-✍️ Writing
-
-I write Backprop Diaries, documenting my AI/ML learning journey through experiments, concepts, failures and things I learn while building.
-
-Read Backprop Diaries →
-
-📫 Let's Connect
+## 📫 Let's Connect
 
 <div align="center">
 
